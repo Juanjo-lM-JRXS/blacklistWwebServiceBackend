@@ -24,8 +24,8 @@ public class Operaciones {
 
     public Operaciones() {
     }    
-        @GET
-        @Path("/lista")
+    @GET
+    @Path("/lista")
     public List<String> Listar(){
             List<String> items = new ArrayList<>();
             items.add("450170");
@@ -37,8 +37,8 @@ public class Operaciones {
            return items;
     }
     
-        @GET
-        @Path("/buscar/{id}")
+    @GET
+    @Path("/buscar/{id}")
     public int buscar(@PathParam("id")String id){
         int rta = 0;
         for(int i = 0; i<Listar().size(); i++){
